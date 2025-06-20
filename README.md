@@ -4,7 +4,7 @@
 - **Name**: simple(JinYitong)
 - **Student ID**: 20232035
 - **Profile Photo**:  
-![Profile](personal_site\profile.jpeg)
+![Profile](personal_site/profile.jpeg)
 
 ## Application URLs
 1. Personal Website: http://47.109.136.27:8081/
