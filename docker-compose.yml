@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # 个人网站服务
+  personal_site:
+    build: ./personal_site
+    ports:
+      - "8081:80"  # 映射到你的第一个端口
+    restart: always
+    networks:
+      - app-network
+
+  # Todo应用服务
+  todo_app:
+    image: docker.io/dockersamples/example-todo
+    ports:
+      - "8082:80"  # 映射到你的第二个端口
+    restart: always
+    networks:
+      - app-network
+
+# 创建网络让两个容器可以通信
+networks:
+  app-network:
+    driver: bridge
